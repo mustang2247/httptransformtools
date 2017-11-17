@@ -10,8 +10,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -47,14 +45,14 @@ public class CommonService {
             if (Constents.channels.contains(channelid)) {
                 ip = IPAddressUtil.getClientIpAddress(httpServletRequest);
                 // 时间
-                LocalDateTime date = LocalDateTime.now();
-                DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+//                LocalDateTime date = LocalDateTime.now();
+//                DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
                 Map<String, String> params = new HashMap<>();
                 params.put("snid", snid);
                 params.put("gameid", gameid);
                 params.put("ip", ip);
-                params.put("ds", dateFormatter.format(date));
+                params.put("ds", ds);
                 params.put("jsonString", jsonString);
                 params.put("metric", metric);
 
