@@ -120,7 +120,7 @@
                 <!--<version>${spring.boot.version}</version>-->
                 <configuration>
                     <fork>true</fork>
-                    <mainClass>com.mybitop.gameversioncontrol.Application</mainClass>
+                    <mainClass>com.openapi.httptransform.HttptransformApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
