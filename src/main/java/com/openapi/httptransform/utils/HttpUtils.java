@@ -33,7 +33,6 @@ public class HttpUtils {
 
         String query = null;
         if(pars != null){
-//            pars.put("sign_type", "md5");
             query = Create_linkString(pars, CHAR_SET);
         }
 
@@ -41,11 +40,6 @@ public class HttpUtils {
         {
             host += "?";
         }
-
-//        if (host.indexOf("?") != -1)
-//            host += "&_charset=" + CHAR_SET;
-//        else
-//            host += "?_charset=" + CHAR_SET;
 
         return getRequest(host, query, CHAR_SET);
     }
