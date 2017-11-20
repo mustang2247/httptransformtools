@@ -61,7 +61,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -93,7 +93,7 @@
                 <envdir>qa/</envdir>
                 <log4j.level>INFO</log4j.level>
                 <log4j.appender>dailyLog</log4j.appender>
-                <log.dir>./logs/gvs</log.dir>
+                <log.dir>./logs/hft</log.dir>
                 <profileActive>qa</profileActive>
             </properties>
         </profile>
@@ -104,7 +104,7 @@
                 <envdir>qcloud/</envdir>
                 <log4j.level>INFO</log4j.level>
                 <log4j.appender>dailyLog</log4j.appender>
-                <log.dir>./logs/gvs</log.dir>
+                <log.dir>./logs/hft</log.dir>
                 <profileActive>qcloud</profileActive>
             </properties>
         </profile>
@@ -120,6 +120,7 @@
                 <!--<version>${spring.boot.version}</version>-->
                 <configuration>
                     <fork>true</fork>
+                    <excludeDevtools>false</excludeDevtools>
                     <mainClass>com.openapi.httptransform.HttptransformApplication</mainClass>
                 </configuration>
                 <executions>
