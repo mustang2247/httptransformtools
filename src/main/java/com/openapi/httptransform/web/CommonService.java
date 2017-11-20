@@ -38,7 +38,7 @@ public class CommonService {
                          String jsonString,
                          String metric,
                          HttpServletRequest httpServletRequest) {
-        logger.info(Constents.REP_TYPE_EQUIPMENT + " : " + snid + " : " + gameid + " : " + ip + " : " + ds + " : " + jsonString);
+//        logger.info(Constents.REP_TYPE_EQUIPMENT + " : " + snid + " : " + gameid + " : " + ip + " : " + ds + " : " + jsonString);
 
         try {
             JSONObject data = JSON.parseObject(jsonString);
