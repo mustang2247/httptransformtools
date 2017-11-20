@@ -57,9 +57,6 @@ public class CommonService {
                 params.put("ds", dateFormatter.format(date));
                 params.put("jsonString", jsonString);
                 params.put("metric", metric);
-
-                logger.info("#######   " + JSON.toJSONString(params));
-
                 HttpUtils.Get(Constents.BASE_BI_URL, params);
             }
         } catch (Exception e) {
